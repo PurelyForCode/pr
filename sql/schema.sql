@@ -274,7 +274,7 @@ CREATE TABLE prophet_setting_holiday (
     model_setting_id UUID NOT NULL REFERENCES prophet_model_setting(id) ON DELETE CASCADE,
 
     holiday_name TEXT NOT NULL,
-    ds DATE NOT NULL,
+    ds DATE[] NOT NULL,
     lower_window INTEGER NOT NULL DEFAULT 0,
     upper_window INTEGER NOT NULL DEFAULT 0
 );
